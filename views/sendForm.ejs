@@ -1,0 +1,17 @@
+<%- include('./partials/header.ejs') %>
+
+<h1 class="text-center">Data Send</h1>
+<div class="container">
+    <form action="/data-form" method="POST" enctype="multipart/form-data">
+        <input type="text" class="form-control mt-3" placeholder="First Name" name="firstName">
+        <input type="text" class="form-control mt-3" placeholder="Last Name" name="lastName">
+        <input type="email" class="form-control mt-3" placeholder="Email" name="email">
+        <input type="file" class="form-control mt-3" name="image">
+
+        <button type="submit" class="btn btn-primary mt-5">New Data Send</button>
+    </form>
+</div>
+
+
+
+<%- include('./partials/footer.ejs')%>

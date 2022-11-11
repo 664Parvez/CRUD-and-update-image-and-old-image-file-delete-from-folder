@@ -1,0 +1,21 @@
+<%- include('./partials/header.ejs') %>
+
+
+<h1 class="text-center">Data Update</h1>
+<div class="container">
+    <form action="/update/<%= item._id%>" method="POST"  enctype="multipart/form-data">
+        <input type="text" class="form-control mt-3" placeholder="First Name" name="firstName" value="<%= item.firstName%>">
+        <input type="text" class="form-control mt-3" placeholder="Last Name" name="lastName" value="<%= item.lastName%>">
+        <input type="email" class="form-control mt-3" placeholder="Email" name="email" value="<%= item.email%>">
+        <input type="file" class="form-control mt-3" name="image" value="">
+        
+        <img src="/<%=item.image %>" width="50" height="50" alt="">
+        <input type="hidden" value="<%= item.image%>" name="old_img">
+
+        <button type="submit" class="btn btn-primary mt-5">Data Update</button>
+    </form>
+</div>
+
+
+
+<%- include('./partials/footer.ejs')%>
